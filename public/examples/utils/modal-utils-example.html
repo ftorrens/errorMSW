@@ -1,0 +1,20 @@
+<k-modal @close="controlModalNotification = !controlModalNotification"
+         :class-modal="controlModalNotification ? 'show' : '' ">
+
+    <template #header>
+        <h5 class="modal-title">Notificación</h5>
+    </template>
+
+    <template #body>
+
+        <p>Estimado programador de Vue, este es un ejemplo de una ventana de notificacion usando el componente
+            {{"<k-modal>"}}.
+        </p>
+
+    </template>
+
+    <template #footer>
+        <k-link class="btn btn-secondary" @click.prevent="showModalNotification" text="Cerrar"></k-link>
+    </template>
+
+</k-modal>

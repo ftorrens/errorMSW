@@ -1,0 +1,30 @@
+<k-form class="form" ref="form">
+    <k-input id="nombre"
+             placeholder="Escribe tu nombre"
+             name="name"
+             rules="required"
+             label="Nombre"
+             maxlength="30"
+             v-model="formData.name"
+    ></k-input>
+    <k-input
+            id="email"
+            name="email"
+            type="email"
+            rules="required|email"
+            placeholder="Escribe tu email"
+            v-model="formData.email"
+            label="Email"
+    ></k-input>
+    <k-input
+            id="password"
+            name="password"
+            type="password"
+            rules="required"
+            placeholder="Contraseña"
+            v-model="formData.password"
+            label="Password"
+    ></k-input>
+
+    <button class="btn btn-primary mt-3" type="submit" @click.prevent="validate()">VALIDAR</button>
+</k-form>

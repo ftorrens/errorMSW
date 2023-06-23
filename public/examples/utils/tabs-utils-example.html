@@ -1,0 +1,17 @@
+<k-tabs
+        id="tab-example"
+        :loading="loading"
+        @submit="sendDataSuccess"
+        ref="KTabsRef"
+>
+
+    <k-tab title="Tabulador 1">Contenido tabulador 1</k-tab>
+    <k-tab title="Tabulador 2">Contenido tabulador 2</k-tab>
+    <k-tab title="Tabulador 3">Contenido tabulador 3</k-tab>
+
+    <template #save>
+        <i class="bi bi-folder-plus float-end me-2" />
+        Salvar
+    </template>
+
+</k-tabs>

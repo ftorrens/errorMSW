@@ -1,0 +1,47 @@
+<k-table id="table-content"
+         class="table table-dark table-striped table-workers pt-5"
+         :headers="headersTableDemo"
+         :contents="contentTableDemoTrue"
+         :columnSticky="['8']"
+         :columnOptions=true
+         @sort-by-column="handlesortByColumn($event)"
+         @switch-from-k-table="switchElementKtable($event)">
+
+    <template #theader>
+        <img :src="iconTriangleUp" class="bi-arrow-up">
+        <img :src="iconTriangleDown" class="bi-arrow-down">
+    </template>
+
+    <template #optionTd="{id_element}">
+        <k-tooltip windowPosition="top-left" textAlign="left" eventShow="click">
+
+            <template #target >
+                <k-link text="Editar" class="">
+                    <template #suffix>
+                        <i class="bi bi-pencil"></i>
+                    </template>
+                </k-link>
+            </template>
+
+            <template #content>
+                <div class="options-table">
+
+                    <k-link text="Modificar" class="mb-3" @click.prevent="EditItem(id_element)">
+                        <template #suffix>
+                            <i class="bi bi-pencil"></i>
+                        </template>
+                    </k-link>
+
+                    <k-link text="Eliminar" class="" @click.prevent="DeleteItem(id_element)">
+                        <template #suffix>
+                            <i class="bi bi-trash"></i>
+                        </template>
+                    </k-link>
+
+                </div>
+            </template>
+
+        </k-tooltip>
+    </template>
+
+</k-table>

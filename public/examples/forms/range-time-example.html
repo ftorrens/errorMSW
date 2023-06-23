@@ -1,0 +1,47 @@
+<k-form
+        id="form-range-time"
+        ref="kFormComponent"
+        class="form"
+>
+    <k-range-time
+            id="range-time"
+            v-model="rangeTime"
+            label-main="Rango de tiempo"
+            name="range-selected"
+            rules="required"
+            :format-hours="24"
+    />
+
+    <div class="w-100 text-end mt-4">
+        <a
+                href="#"
+                class="btn btn-primary"
+                @click.prevent="sendForm"
+        >Salvar</a>
+    </div>
+</k-form>
+<k-modal
+        :class-modal="controlModalNotification ? 'show' : '' "
+        @close="controlModalNotification = !controlModalNotification"
+>
+    <template #header>
+        <h5 class="modal-title">
+            Notificación
+        </h5>
+    </template>
+
+    <template #body>
+        <p>Horario validado correctamente, listo para enviar al servidor {{ rangeTime }}</p>
+    </template>
+
+    <template #footer>
+        <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                @click="showHideModal"
+        >
+            Cerrar
+        </button>
+    </template>
+</k-modal>

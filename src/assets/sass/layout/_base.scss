@@ -1,0 +1,73 @@
+body{
+    font-family : "Nunito Sans", sans-serif;
+    font-weight: 300;
+    background-color: $black;
+    color: $gray-100;
+}
+
+hr{
+    border-color: $gray-700;
+    background-color: $gray-700;
+    opacity: 1;
+}
+
+h1,
+.h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2,
+.h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3,
+.h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+b{
+    font-weight: 700;
+}
+
+.col-middle{
+    width: calc(100% / 1);
+}
+
+.page-content{
+    margin-top: 65px;
+}
+
+@include media-breakpoint-up(lg){
+
+    .flex-lg-grow-1{
+        flex-grow: 0 !important;
+        margin-top: -57px;
+        border-right: 1px solid $gray-700;
+        z-index: 2;
+    }
+
+    .flex-lg-grow-2{
+        width: 100%;
+        max-width: 80%;
+    }
+
+    .container-fluid{
+        padding-left: 0px;
+    }
+
+    .page-content{
+        margin-top: 0px;
+    }
+
+}
+
+@include media-breakpoint-up(xl){
+
+    .flex-lg-grow-2{
+        max-width: 83%;
+    }
+}

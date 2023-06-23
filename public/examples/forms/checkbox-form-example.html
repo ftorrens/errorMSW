@@ -1,0 +1,46 @@
+<k-form class="form" ref="form">
+    <div class="form-group">
+        <p>Escoge tus conocimientos</p>
+        <k-checkbox
+                id="javascript"
+                name="conocimientos"
+                value="javascript"
+                rules="required"
+                v-model="formData.conocimientos"
+                :is-checked="true"
+                main-label="Javascript"
+                label="Javascript">
+        </k-checkbox>
+        <k-checkbox
+                id="php"
+                name="conocimientos"
+                value="php"
+                rules="required"
+                v-model="formData.conocimientos"
+                main-label="Php"
+                label="Php">
+        </k-checkbox>
+        <k-checkbox
+                id="phyton"
+                name="conocimientos"
+                value="phyton"
+                rules="required"
+                v-model="formData.conocimientos"
+                main-label="Phyton"
+                label="Phyton">
+        </k-checkbox>
+    </div>
+    <hr>
+    <div class="form-group mt-2">
+        <k-checkbox
+                id="legal"
+                name="legal"
+                value="on"
+                rules="required"
+                v-model="formData.legal"
+                main-label="Componente <k-checkbox>"
+                label="Acepto la política de privacidad"
+        ></k-checkbox>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3" @click.prevent="validate()">VALIDAR</button>
+</k-form>

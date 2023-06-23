@@ -1,0 +1,24 @@
+<k-nav id="main-menu-example" 
+       :links="menuLinks" 
+       :class="{
+                'collapsed': isCollapsedExample
+        }" 
+        :is-collapsed="isCollapsedExample">
+        <template #header>
+            <div class="nav-custom_header d-flex d-lg-inline-block">
+                <span class="logo">Logo</span>
+                <button :class="[
+                        {
+                        'collapsed' : isCollapsed
+                      },
+                      'navbar-toggler'
+                    ]"
+                    @click.prevent="isCollapsedExample = !isCollapsedExample">
+                    <span class="navbar-toggler-icon">
+                        <span class="navbar-toggler-line" />
+                    </span>
+                </button>
+                <span class="d-none">Menú</span>
+            </div>
+        </template>
+</k-nav>

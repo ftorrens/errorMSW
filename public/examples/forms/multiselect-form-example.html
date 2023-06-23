@@ -1,0 +1,18 @@
+<k-form
+        id="form-multiselect"
+        ref="kFormComponent"
+        class="form"
+>
+    <k-multiselect
+            id="telefonos"
+            v-model="valuesSelected"
+            name="phones"
+            :options="optionsChecks"
+            labelText="Teléfonos*"
+            rules="required"
+    />
+
+    <div class="w-100 text-end mt-4">
+        <k-form-button id="btn-form"  @click.prevent="sendForm">SALVAR</k-form-button>
+    </div>
+</k-form>

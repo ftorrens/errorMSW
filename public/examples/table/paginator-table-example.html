@@ -1,0 +1,28 @@
+<h3>Formato normal: </h3>
+
+<k-table-paginator id="pagination"
+                   :totalPages="paginatorData.totalPages"
+                   :currentPage="paginatorData.currentPage"
+                   @click-to-page="handleToPage($event)"
+                   @click-next-page="handleNextPage"
+                   @click-prev-page="handlePrevPage"
+>
+    <template #arrow-left>&laquo;</template>
+    <template #arrow-right>&raquo;</template>
+</k-table-paginator>
+
+<hr>
+
+<h3>Formato en fracción: </h3>
+
+<k-table-paginator id="pagination-fraction"
+                   :totalPages="paginatorData.totalPages"
+                   :currentPage="paginatorData.currentPage"
+                   :formatFraction=true
+                   @click-to-page="handleToPage($event)"
+                   @click-next-page="handleNextPage"
+                   @click-prev-page="handlePrevPage"
+>
+    <template #arrow-left>&laquo;</template>
+    <template #arrow-right>&raquo;</template>
+</k-table-paginator>

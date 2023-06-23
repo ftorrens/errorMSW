@@ -1,0 +1,9 @@
+<k-form id="example-textarea" ref="form" class="form">
+    <k-textarea
+            id="comments"
+            v-model="data.comments"
+            name="comments"
+            rules="required">
+    </k-textarea>
+    <button class="btn btn-primary" @click.prevent="form.validateForm()">VALIDAR</button>
+</k-form>

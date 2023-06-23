@@ -1,0 +1,27 @@
+<k-form method="POST" class="form" action="/api/form/test" ref="form">
+    <label class="form-label">Selecciona uno de los siguientes roles</label>
+    <k-radio id="rol-dev"
+             name="rol"
+             rules="required"
+             value="programador"
+             v-model="formData.rol"
+             label="programador"
+    ></k-radio>
+    <k-radio id="rol-design"
+             name="rol"
+             rules="required"
+             value="diseñador"
+             v-model="formData.rol"
+             label="diseñador"
+    ></k-radio>
+    <k-radio id="rol-performance"
+             name="rol"
+             rules="required"
+             value="performance"
+             v-model="formData.rol"
+             label="performance"
+    ></k-radio>
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary" @click.prevent="send()">VALIDAR</button>
+    </div>
+</k-form>

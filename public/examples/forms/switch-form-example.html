@@ -1,0 +1,32 @@
+<k-form class="form" method="POST" ref="form">
+
+    <label>Selecciona al menos un día de la semana</label>
+    <k-switch v-for="day in weekDays"
+              :id="day"
+              :label="day"
+              :value="day"
+              name="days"
+              v-model="data.days"
+              rules="required"
+    ></k-switch>
+    <hr>
+    <k-switch
+            id="legal"
+            label="Acepto la Política de Privacidad"
+            name="legal"
+            rules="required"
+            value="on"
+            v-model="data.legal"
+    ></k-switch>
+
+    <k-switch
+            id="consent"
+            name="consent"
+            rules="required"
+            value="on"
+            label="Acepto el consentimiento de datos"
+            :is-checked="true"
+            v-model="data.consent"
+    ></k-switch>
+    <button class="btn btn-primary mt-3" @click.prevent="validateForm()">VALIDAR</button>
+</k-form>

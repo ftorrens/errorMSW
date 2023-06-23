@@ -1,0 +1,18 @@
+<k-form id="form-select" class="form" ref="form">
+    <label>Selecciona una de las siguientes opciones</label>
+    <k-select id="programar"
+              name="programar"
+              class="mt-3"
+              label="¿Te apasiona programar?"
+              error="invalid-feedback mb-2"
+              rules="required"
+              v-model="formData.passion"
+              :options="selectOptions"
+    >
+        <option value="">Selecciona una opción</option>
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+        <option value="a-veces">A veces...</option>
+    </k-select>
+    <button class="btn btn-primary mt-3" @click.prevent="validate">VALIDAR</button>
+</k-form>

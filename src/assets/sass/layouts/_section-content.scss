@@ -1,0 +1,24 @@
+.section-group{
+    margin-bottom: 2em;
+}
+
+/*.flex-lg-grow-2{
+    max-width: 1200px;
+}*/
+
+@include media-breakpoint-up(lg){
+    .section-content{
+        display: block;
+        box-sizing: border-box;
+        height: calc(100vh - 56px);
+        overflow-y: auto;
+        max-width: none;
+        border-right: 1px solid $gray-700;
+        padding: 0px 20px;
+    }
+
+    .section-container{
+        border-left: 1px solid $gray-700;
+
+    }
+}

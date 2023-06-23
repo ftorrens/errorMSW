@@ -1,0 +1,13 @@
+.btn{
+    box-sizing:border-box;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary{
+    color: $white;
+    &:hover,
+    &:focus{
+        color: $white;
+    }
+}

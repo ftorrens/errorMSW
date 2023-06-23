@@ -1,0 +1,11 @@
+// SOLO SE SUSTITUYEN LAS VARIABLES QUE SE QUIEREN SUSTIUIR
+// AL TENER !DEFAULT EN LAS VARIABLES DE BOOTSTRAP SOLO SE SUSTITUIRÁN AQUELLAS QUE SE HAN DEFINIDO PRIMERO
+// POR ESO ESTE ARCHIVO SE PONE POR ENCIMA DE LAS VARIABLES DE BOOTSTRAP
+// ESTO EVITA QUE AL ACTUALIZAR SE GENEREN FALLOS AL COMPILAR EL SASS PORQUE FALTAN VARIABLES
+
+// COLORES
+$pink:    #FF6E9E;
+$primary : $pink;
+
+// INPUT SELECT
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
