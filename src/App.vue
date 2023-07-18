@@ -35,7 +35,7 @@ import {
 
 export default {
   name: 'App',
-
+  
   setup(props, context) {
 
     useValidation()
